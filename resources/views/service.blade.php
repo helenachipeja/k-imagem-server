@@ -31,12 +31,12 @@
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-dark" href="FAQ.html">FAQs</a>
+            <div class="d-inline-flex align-items-center">
+                    <a class="text-dark" href="{{('faq')}}">FAQs</a>
                     <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="contact.html">Ajuda</a>
+                    <a class="text-dark" href="{{('contact')}}">Ajuda</a>
                     <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="contact.html">Suporte</a>
+                    <a class="text-dark" href="{{('contact')}}">Suporte</a>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
@@ -61,7 +61,7 @@
         </div>
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none">
+                <a href="/" class="text-decoration-none">
                     <h1 class="m-0 display-5 font-weight-semi-bold"><img src="img/logo1.jpg" alt="Nome do logotipo"></h1>
                 </a>
             </div>
@@ -82,11 +82,11 @@
                 </form>
             </div>
             <div class="col-lg-3 col-6 text-right">
-                <a href="sigin.html" class="btn border">
+                <a href="{{('sigin')}}" class="btn border">
                     <i class="fas fa-hand-holding-heart text-primary"></i>
                     <span class="badge">Solicitar</span>
                 </a>
-                <a href="sigin.html" class="btn border">
+                <a href="{{('sigin')}}" class="btn border">
                     <i class="fas fa-sign-in-alt text-primary"></i>
                     <span class="badge">Login</span>
                 </a>
@@ -110,8 +110,8 @@
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                            <a href="shop.html" class="nav-item nav-link">serviços</a>
+                            <a href="{{('/')}}" class="nav-item nav-link active">Inicio</a>
+                            <a href="{{('service')}}" class="nav-item nav-link">serviços</a>
                            <!--<a href="detail.html" class="nav-item nav-link">Shop Detail</a>-->
                             <!--<div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
@@ -128,32 +128,35 @@
                                             <img  src="img/rotulo/rot4.jpg" alt="">
                                         </div>
                                         <div class="row">
-                                            <header>cat1</header>
+                                            <header>Identidade visual </header>
                                             <ul class="mega-links">
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
+                                            <a href="{{('service')}}#cartao" class="dropdown-item">Cartões de visita</a>
+                                <a href="{{('service')}}#papel" class="dropdown-item">Papel de parede personalizado</a>
+                                <a href="{{('service')}}#rotulo" class="dropdown-item">Rótulos</a>
+                                <a href="{{('service')}}#logotipo" class="dropdown-item">Logotipo</a>
+                                <a href="{{('service')}}#outdoor" class="dropdown-item">Outdoor</a>
 
                                             </ul>
                                         </div>
                                         <div class="row">
-                                            <header>cat1</header>
+                                            <header>Comunicação visual</header>
                                             <ul class="mega-links">
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
+                                            <a href="{{('service')}}#cartaz" class="dropdown-item">Cartazes</a>
+                                            <a href="{{('service')}}#menu" class="dropdown-item">Menu</a>
+                                            <a href="{{('service')}}#cracha" class="dropdown-item">Cracha</a>
+                                            <a href="{{('service')}}#rotulo" class="dropdown-item">Rótulos</a>
+                                            <a href="{{('service')}}#album" class="dropdown-item">Capa de álbum</a>
 
                                             </ul>
                                         </div>
                                         <div class="row">
-                                            <header>cat1</header>
+                                            <header>Personalização</header>
                                             <ul class="mega-links">
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
-                                                <li><a href="">banner</a></li>
+                                            <a href="{{('service')}}#branding" class="dropdown-item">Branding de viatura</a>
+                                             <a href="{{('service')}}#flags" class="dropdown-item">Bandeira personalizada</a>
+                                <a href="{{('service')}}#envelope" class="dropdown-item">Envelope</a>
+                                <a href="{{('service')}}#matricula" class="dropdown-item">Matrículas de casamento personalizadas</a>
+
 
                                             </ul>
                                         </div>
@@ -162,8 +165,8 @@
 
                                 </div>
                             </li>
-                            <a href="FAQ.html" class="nav-item nav-link">FAQ</a>
-                            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                            <a href="{{('faq')}}" class="nav-item nav-link">FAQ</a>
+                            <a href="{{('contact')}}" class="nav-item nav-link">Contacto</a>
                         </div>
 
                     </div>

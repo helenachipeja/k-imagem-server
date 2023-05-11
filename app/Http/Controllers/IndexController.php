@@ -25,7 +25,7 @@ class IndexController extends Controller
     }
 
 
-    public function contacts(){
+    public function contact(){
         return view('contact',[
         ]);
     }

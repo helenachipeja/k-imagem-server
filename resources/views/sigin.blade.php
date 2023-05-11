@@ -7,16 +7,16 @@ content="IE=edge">
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 <title>UI</title>
-<link rel="stylesheet" href="style-login.css">
+<link rel="stylesheet" href="css/style-login.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
         <nav class="navbar">
-            <a href="index.html" class="nav-item nav-link active">Inicio</a>
-            <a href="shop.html" class="nav-item nav-link">serviços</a>
-            <a href="FAQ.html" class="nav-item nav-link">FAQ</a>
-            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+            <a href="{{('/')}}" class="nav-item nav-link active">Inicio</a>
+            <a href="{{('service')}}" class="nav-item nav-link">serviços</a>
+            <a href="{{('faq')}}" class="nav-item nav-link">FAQ</a>
+            <a href="{{('contact')}}" class="nav-item nav-link">Contacto</a>
         </nav>
         <form action="#" class="search-bar">
             <input type="text" placeholder="Pesquisa" >
@@ -44,20 +44,22 @@ content="width=device-width, initial-scale=1.0">
         </div>
         <div class="logreg-box">
             <div class="form-box login">
-                <form action="#">
+            <form role="form" method="POST" action="{{ route('login') }}">
+                        @csrf
                     <h2>Login</h2>
                     <div class="input-box">
                         <span class="icon">
                             <i class='bx bxs-envelope'></i>
                         </span>
-                        <input type="email" required>
+                        <input type="email" name="email" value="{{ old('email') }}" autofocus required>
                         <label>Email</label>
                     </div>
+
                     <div class="input-box">
                         <span class="icon">
                             <i class='bx bxs-lock-alt'></i>
                         </span>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Senha</label>
                     </div>
 
@@ -66,7 +68,7 @@ content="width=device-width, initial-scale=1.0">
                         <a href="#">Esqueceu a senha?</a>
                     </div>
 
-                    <button type="submit" class="btn"  onclick="window.location.href='checkout.html'">Entrar</button>
+                    <button type="submit" class="btn" href="{{('checkout')}}"  >Entrar</button>
                     <div class="login-register">
                         <p>Não tem uma conta?<a href="#" class="register-link">  Cadastro</a></p>
                     </div>
@@ -74,27 +76,28 @@ content="width=device-width, initial-scale=1.0">
             </div>
 
             <div class="form-box register">
-                <form action="#">
+            <form role="form" method="POST" action="{{ route('register') }}">
+                        @csrf
                     <h2>Cadastro</h2>
                     <div class="input-box">
                         <span class="icon">
                             <i class='bx bxs-user'></i>
                         </span>
-                        <input type="text" required>
+                        <input type="text" name="name" required>
                         <label>Nome</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <i class='bx bxs-envelope'></i>
                         </span>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <i class='bx bxs-lock-alt'></i>
                         </span>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Senha</label>
                     </div>
 
@@ -111,6 +114,8 @@ content="width=device-width, initial-scale=1.0">
             </div>
         </div>
     </div>
-    <script src="script-login.js"></script>
+    <script src="js/script-login.js"></script>
 </body>
 </html>
+
+

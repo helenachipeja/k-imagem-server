@@ -1,6 +1,7 @@
 
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 
@@ -16,16 +17,20 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-// Route::get('/', function () {
-    // return view('welcome');
-// });
+
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/service', [IndexController::class, 'service'])->name('service');
 Route::get('/contact', [IndexController::class, 'contact'])->name('contact');
 Route::get('/faq', [IndexController::class, 'faq'])->name('faq');
 Route::get('/checkout', [IndexController::class, 'checkout'])->name('checkout');
-Route::get('/sigin', [IndexController::class, 'sigin'])->name('sigin');
+
+
+Route::get('/sigin', [AuthController::class, 'sigin'])->name('sigin');
+
+Route::post('/sigin', [AuthController::class, 'login'])->name('login');
+
+Route::post('/register', [AuthController::class, 'register'])->name('register');
 
 Route::group(['middleware' => ['auth']], function () {
 

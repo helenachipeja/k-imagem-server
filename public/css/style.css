@@ -3505,7 +3505,7 @@ input[type="button"].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  
+
 }
 
 .custom-control-inline {
@@ -6366,7 +6366,7 @@ button.bg-dark:focus {
 }
 
 .d-flex {
-  display: flex !important;
+  display: flex ;
 }
 
 .d-inline-flex {
@@ -9575,7 +9575,7 @@ text-align: center;
 
 .offer .text-md-left img {
   right: 0;
-  
+
 }
 
 .cat-item .cat-img img{
@@ -9699,7 +9699,7 @@ textarea {
   position:absolute;
   top: 0;
   background: #242526;
-  width: 100%;
+  width: 135%;
   left: 0;
   opacity:0;
   visibility: hidden;
@@ -9742,6 +9742,7 @@ textarea {
 }
 .row .mega-links li{
   padding: 0 20px;
+  margin-left: -60px;
 }
 
 .row .mega-links li a{
@@ -9749,6 +9750,7 @@ textarea {
   color:#d9d9d9;
   font-size: 17px;
   display:block;
+  margin-left: -60px;
 }
 
 
@@ -9951,3 +9953,15 @@ textarea {
   margin-bottom: 1.5rem;
 }
 
+.page-header.bg-secondary.mb-5 {
+    background-color: #000000   !important;
+  }
+
+
+  .container-fluid .contact .d-flex p {
+    color: black;
+  }
+
+  .container-fluid .contact p {
+    color: black;
+  }
